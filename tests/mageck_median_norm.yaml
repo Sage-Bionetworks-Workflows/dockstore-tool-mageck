@@ -1,0 +1,19 @@
+count_table:
+  class: File
+  path: data/sample.txt
+
+treatment_ids: 
+  - HL60.final
+  - KBM7.final
+
+control_ids: 
+  - HL60.initial
+  - KBM7.initial
+  
+norm_method: median
+
+pdf_report: true
+
+normcounts_to_file: true
+
+output_prefix: mageck_median_norm

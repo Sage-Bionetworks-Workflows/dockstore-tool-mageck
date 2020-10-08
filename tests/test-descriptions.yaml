@@ -1,7 +1,59 @@
-- job: echo_hello_world.yaml
+- job: mageck_median_norm.yaml
   output:
-    out: "hello, world!"
-  tool: ../cwl/echo.cwl
-  label: echo_hello_world_test
+    gene_summary:
+      class: File
+      basename: mageck_median_norm.gene_summary.txt
+      checksum: sha1$e2bbd23fe5a74814b345213bbe796137849cdacc
+    sgrna_summary:
+      class: File
+      basename: mageck_median_norm.sgrna_summary.txt
+      checksum: sha1$b0e0251db5e2b2f1c7f857925156c8633b6d5806
+    log_file:
+      class: File
+      basename: mageck_median_norm.log
+    pdf_report_script:
+      class: File
+      basename: mageck_median_norm.R
+      checksum: sha1$723e066fa712685a9d1d25d96ff807e0a2b4d00e
+    pdf_report_sweave:
+      class: File
+      basename: mageck_median_norm_summary.Rnw
+      checksum: sha1$0ef70c29f83d23c9bd083eee0a6fa1ce5e682c62
+    normalized_counts:
+      class: File
+      basename: mageck_median_norm.normalized.txt
+      checksum: sha1$4af1225ace4761b1e793ea2feee2ce3e984e9243
+  tool: ../cwl/mageck.cwl
+  label: mageck_median_norm
   id: 0
-  doc: Placeholder test
+  doc: MAGeCK test run with median normalization
+
+- job: mageck_control_norm.yaml
+  output:
+    gene_summary:
+      class: File
+      basename: mageck_control_norm.gene_summary.txt
+      checksum: sha1$5236a8fe0b2d6de8501b9ae5e4d41dba66040bd6
+    sgrna_summary:
+      class: File
+      basename: mageck_control_norm.sgrna_summary.txt
+      checksum: sha1$61302370a8f95c8ca2baf0ef02841ade8202a796
+    log_file:
+      class: File
+      basename: mageck_control_norm.log
+    pdf_report_script:
+      class: File
+      basename: mageck_control_norm.R
+      checksum: sha1$9653bedf7aa3673f33451ea3a26925c1e14dfa6d
+    pdf_report_sweave:
+      class: File
+      basename: mageck_control_norm_summary.Rnw
+      checksum: sha1$134de0692254912ad19f614d27480c6274c62289
+    normalized_counts:
+      class: File
+      basename: mageck_control_norm.normalized.txt
+      checksum: sha1$1ded17c14056a2dc30e5ef5e6aa217646724b565
+  tool: ../cwl/mageck.cwl
+  label: mageck_control_norm
+  id: 1
+  doc: MAGeCK test run with control-sgrna normalization
