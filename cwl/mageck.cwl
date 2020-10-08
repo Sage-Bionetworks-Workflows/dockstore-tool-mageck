@@ -28,7 +28,7 @@ hints:
         specs: [ "https://doi.org/10.1186/s13059-014-0554-4" ]
         version: [ "0.5.9.2" ]
   DockerRequirement:
-    dockerPull: quay.io/brunograndephd/dockstore-tool-mageck:0.0.5
+    dockerPull: sagebionetworks/dockstore-tool-mageck:0.0.5
 
 baseCommand:
   - mageck
