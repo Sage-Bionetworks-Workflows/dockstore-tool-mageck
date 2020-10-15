@@ -1,0 +1,23 @@
+count_table:
+  class: File
+  path: data/sample.txt
+
+control_sgrna:
+  class: File
+  path: data/control_sgrna.txt
+
+treatment_ids: 
+  - HL60.final
+  - KBM7.final
+
+control_ids: 
+  - HL60.initial
+  - KBM7.initial
+  
+norm_method: control
+
+generate_pdf_report: true
+
+normcounts_to_file: true
+
+output_prefix: mageck_control_norm

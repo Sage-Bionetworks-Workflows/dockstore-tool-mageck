@@ -1,7 +1,47 @@
-- job: echo_hello_world.yaml
+- label: mageck_median_norm
+  doc: MAGeCK test run with median normalization
+  tool: ../cwl/mageck.cwl
+  job: mageck_median_norm.yaml
   output:
-    out: "hello, world!"
-  tool: ../cwl/echo.cwl
-  label: echo_hello_world_test
-  id: 0
-  doc: Placeholder test
+    gene_summary:
+      class: File
+      basename: mageck_median_norm.gene_summary.txt
+      checksum: sha1$e2bbd23fe5a74814b345213bbe796137849cdacc
+    sgrna_summary:
+      class: File
+      basename: mageck_median_norm.sgrna_summary.txt
+      checksum: sha1$b0e0251db5e2b2f1c7f857925156c8633b6d5806
+    normalized_counts:
+      class: File
+      basename: mageck_median_norm.normalized.txt
+      checksum: sha1$4af1225ace4761b1e793ea2feee2ce3e984e9243
+    pdf_figures:
+      class: File
+      basename: mageck_median_norm.pdf
+    pdf_report:
+      class: File
+      basename: mageck_median_norm_summary.pdf
+
+- label: mageck_control_norm
+  doc: MAGeCK test run with control (sgRNA) normalization
+  tool: ../cwl/mageck.cwl
+  job: mageck_control_norm.yaml
+  output:
+    gene_summary:
+      class: File
+      basename: mageck_control_norm.gene_summary.txt
+      checksum: sha1$5236a8fe0b2d6de8501b9ae5e4d41dba66040bd6
+    sgrna_summary:
+      class: File
+      basename: mageck_control_norm.sgrna_summary.txt
+      checksum: sha1$61302370a8f95c8ca2baf0ef02841ade8202a796
+    normalized_counts:
+      class: File
+      basename: mageck_control_norm.normalized.txt
+      checksum: sha1$1ded17c14056a2dc30e5ef5e6aa217646724b565
+    pdf_figures:
+      class: File
+      basename: mageck_control_norm.pdf
+    pdf_report:
+      class: File
+      basename: mageck_control_norm_summary.pdf
