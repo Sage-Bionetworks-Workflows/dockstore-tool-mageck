@@ -12,6 +12,9 @@ RUN apt-get update && apt-get install --no-install-recommends -y \
 	texlive-latex-extra \
 	&& rm -rf /var/lib/apt/lists/*
 
+# Disable ENTRYPOINT from base image, which prevented cwltool from working
+ENTRYPOINT ["/usr/bin/env"]
+
 LABEL maintainer="Bruno Grande <bruno.grande@sagebase.org>"
 LABEL base_image="davidliwei/mageck:dee56d103bc0081491d3d7d89652add1d4efde8f"
 LABEL about.summary="Docker image for the MAGeCK bioinformatics tool"
