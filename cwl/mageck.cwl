@@ -74,7 +74,7 @@ inputs:
     inputBinding:
       prefix: --norm-method
 
-  pdf_report:
+  generate_pdf_report:
     type: boolean?
     default: false
     inputBinding:
@@ -108,15 +108,10 @@ outputs:
     outputBinding:
       glob: $(inputs.output_prefix).log
 
-  pdf_report_script:
-    type: File
+  pdf_report:
+    type: File?
     outputBinding:
-      glob: $(inputs.output_prefix).R
-
-  pdf_report_sweave:
-    type: File
-    outputBinding:
-      glob: $(inputs.output_prefix)_summary.Rnw
+      glob: $(inputs.output_prefix).pdf
   
   normalized_counts:
     type: File?

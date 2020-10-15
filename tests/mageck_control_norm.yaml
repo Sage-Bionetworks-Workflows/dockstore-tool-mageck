@@ -16,7 +16,7 @@ control_ids:
   
 norm_method: control
 
-pdf_report: true
+generate_pdf_report: true
 
 normcounts_to_file: true
 

@@ -12,7 +12,7 @@ control_ids:
   
 norm_method: median
 
-pdf_report: true
+generate_pdf_report: true
 
 normcounts_to_file: true
 
