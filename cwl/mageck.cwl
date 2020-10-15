@@ -102,21 +102,21 @@ outputs:
     type: File
     outputBinding:
       glob: $(inputs.output_prefix).sgrna_summary.txt
-
-  log_file:
-    type: File
-    outputBinding:
-      glob: $(inputs.output_prefix).log
-
-  pdf_report:
-    type: File?
-    outputBinding:
-      glob: $(inputs.output_prefix).pdf
   
   normalized_counts:
     type: File?
     outputBinding:
       glob: $(inputs.output_prefix).normalized.txt
+
+  pdf_figures:
+    type: File?
+    outputBinding:
+      glob: $(inputs.output_prefix).pdf
+  
+  pdf_report:
+    type: File?
+    outputBinding:
+      glob: $(inputs.output_prefix)_summary.pdf
 
 $namespaces:
   s: https://schema.org/

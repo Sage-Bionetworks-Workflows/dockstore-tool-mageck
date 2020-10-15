@@ -11,16 +11,16 @@
       class: File
       basename: mageck_median_norm.sgrna_summary.txt
       checksum: sha1$b0e0251db5e2b2f1c7f857925156c8633b6d5806
-    log_file:
-      class: File
-      basename: mageck_median_norm.log
-    pdf_report:
-      class: File
-      basename: mageck_median_norm.pdf
     normalized_counts:
       class: File
       basename: mageck_median_norm.normalized.txt
       checksum: sha1$4af1225ace4761b1e793ea2feee2ce3e984e9243
+    pdf_figures:
+      class: File
+      basename: mageck_median_norm.pdf
+    pdf_report:
+      class: File
+      basename: mageck_median_norm_summary.pdf
 
 - label: mageck_control_norm
   doc: MAGeCK test run with control (sgRNA) normalization
@@ -35,13 +35,13 @@
       class: File
       basename: mageck_control_norm.sgrna_summary.txt
       checksum: sha1$61302370a8f95c8ca2baf0ef02841ade8202a796
-    log_file:
-      class: File
-      basename: mageck_control_norm.log
-    pdf_report:
-      class: File
-      basename: mageck_control_norm.pdf
     normalized_counts:
       class: File
       basename: mageck_control_norm.normalized.txt
       checksum: sha1$1ded17c14056a2dc30e5ef5e6aa217646724b565
+    pdf_figures:
+      class: File
+      basename: mageck_control_norm.pdf
+    pdf_report:
+      class: File
+      basename: mageck_control_norm_summary.pdf
