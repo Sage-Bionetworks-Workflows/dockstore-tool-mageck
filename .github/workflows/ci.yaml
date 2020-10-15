@@ -35,7 +35,8 @@ jobs:
         id: docker_build
         uses: docker/build-push-action@v1
         with:
-          repository: quay.io/sagebionetworks/${{ github.event.repository.name }}
+          registry: quay.io
+          repository: sagebionetworks/${{ github.event.repository.name }}
           push: false # don't push before testing
           tags: ${{ env.SHORT_SHA }}
 
@@ -94,7 +95,8 @@ jobs:
         id: docker_publish
         uses: docker/build-push-action@v1
         with:
-          repository: quay.io/sagebionetworks/${{ github.event.repository.name }}
+          registry: quay.io
+          repository: sagebionetworks/${{ github.event.repository.name }}
           username: ${{ secrets.DOCKER_USERNAME }}
           password: ${{ secrets.DOCKER_PASSWORD }}
           tags: ${{ env.NEW_VERSION }},latest
