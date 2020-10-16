@@ -13,7 +13,7 @@ doc: "MAGeCK is a computational tool to identify important genes from the recent
   \nVisit the following URL for more details on the command-line options:\n  https://sourceforge.net/p/mageck/wiki/usage/\n"
 hints:
   DockerRequirement:
-    dockerPull: quay.io/sagebionetworks/dockstore-tool-mageck:0.0.6
+    dockerPull: quay.io/sagebionetworks/dockstore-tool-mageck:0.0.7
   SoftwareRequirement:
     packages:
       mageck:
@@ -94,7 +94,6 @@ outputs:
     outputBinding:
       glob: $(inputs.output_prefix).sgrna_summary.txt
     type: File
-stdout: stdout.txt
 requirements:
 - class: ShellCommandRequirement
 s:author:
@@ -102,3 +101,4 @@ s:author:
   s:email: bruno.grande@sagebase.org
   s:identifier: https://orcid.org/0000-0002-4621-1589
   s:name: Bruno Grande
+stdout: stdout.txt
