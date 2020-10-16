@@ -94,6 +94,7 @@ outputs:
     outputBinding:
       glob: $(inputs.output_prefix).sgrna_summary.txt
     type: File
+stdout: stdout.txt
 requirements:
 - class: ShellCommandRequirement
 s:author:
